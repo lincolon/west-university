@@ -49,8 +49,14 @@
         <section class="container flexbox">
             <aside>
                 <ul>
-                    <li><a href="#" class="active">学术论文汇总</a></li>
-                    <li><a href="#">专利汇总</a></li>
+                    <li>
+                        <a class="active rotate aside-nav-link">学术论文汇总</a>
+                        <ul class="active">
+                            <li><a class="sub-link" href="#">2024</a></li>
+                            <li><a class="sub-link" href="#">2023</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./学术成果-论文.html">专利汇总</a></li>
                 </ul>
             </aside>
             <section class="flex1 content-wrapper"> 
@@ -73,4 +79,22 @@
             </div>
         </footer>
     </body>
+    <script>
+        (function () { 
+
+            document.addEventListener('DOMContentLoaded', app);
+
+            function app() { 
+                var asideNavs = document.querySelectorAll('aside .aside-nav-link');
+                asideNavs.forEach(function (asideNav) { 
+                    asideNav.addEventListener('click', function (e) { 
+                        e.preventDefault();
+                        e.stopPropagation();
+                        var subNavs = e.target.nextElementSibling;
+                        subNavs.classList.toggle('active');
+                    });
+                });
+            }
+        })();
+    </script>
 </html>

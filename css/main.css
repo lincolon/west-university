@@ -478,17 +478,18 @@ footer p{
 }
 
 .container aside ul li{
-    padding-left: 30px;
+    padding: 0;
     list-style: none;
-    border-bottom: 1px solid #D6D6D6;
 }
 
 .container aside ul li a{
     display: flex;
     font-size: 16px;
     height: 50px;
+    padding-left: 30px;
     align-items: center;
     position: relative;
+    border-bottom: 1px solid #D6D6D6;
 }
 
 .container aside ul li a.active::before,
@@ -497,15 +498,40 @@ footer p{
     content: '';
     width: 0;
     height: 0;
-    left: -24px;
+    left: 0px;
     border: 8px solid transparent;
     border-top-color: #F18D00;
     transform: rotate(-90deg);
 }
 
+.container aside ul li a.active.rotate::before{
+    transform: rotate(0deg);
+    top: 20px;
+}
+
 .container aside ul li a.active,
 .container aside ul li a:hover{
     color: #F18D00;
+}
+
+.container aside .sub-link{
+    line-height: 1;
+    padding-left: 60px !important;
+}
+
+.container aside  .aside-nav-link +ul{
+    height: 0px;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+}
+
+.container aside  .aside-nav-link +ul.active{
+    height: auto;
+}
+
+.container aside .sub-link:hover::before,
+.container aside .sub-link:active::before{
+    left: 35px;
 }
 
 .content-wrapper{
