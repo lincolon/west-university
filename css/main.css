@@ -249,6 +249,13 @@ footer p{
     border-bottom: 1px solid #F5F5F5;
 }
 
+.block-title-container .icon-more-dark,
+.block-title-container .icon-more{
+    position: absolute;
+    right: 0px;
+    top: 20px;
+}
+
 .block-title{
     display: inline-flex;
     position: relative;
