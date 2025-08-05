@@ -651,14 +651,14 @@ footer p{
     display: inline-flex;
     width: 20px;
     height: 20px;
-    background-size: cover;
+    background-image: url("../assets/icons/icon-more-white.png");
 }
 
 .icon-more-dark{
     display: inline-flex;
     width: 20px;
     height: 20px;
-    background-size: cover;
+    background-image: url("../assets/icons/icon-more-blue.png");
 }
 
 .icon-next{
