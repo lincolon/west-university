@@ -39,7 +39,7 @@ html,body{
     font-size: 24px;
 }
 
-.fz-16{ font-size: 16px;}
+.fz-16{ font-size: 16px !important}
 
 .fz-14{
     font-size: 14px;
@@ -172,7 +172,7 @@ footer .sep-line{
 }
 
 footer p{
-    font-size: 13px;
+    font-size: 16px;
     text-align: center;
 }
 
@@ -230,6 +230,7 @@ footer p{
 .banner-right .time{
     width: 50px;
     margin-right: 30px;
+    color: #FFAF3F;
 }
 
 .banner-right a{
@@ -237,7 +238,7 @@ footer p{
 }
 
 .banner-right a .title{
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 .banner-right a:hover .title{
@@ -627,12 +628,12 @@ footer p{
 } 
 
 .news-list .news-list-item.pd19 a{
-    padding: 20px 0;
+    padding: 18px 0;
 }
 
 .news-list .news-list-item a .title{
     font-size: 14px;
-    margin-bottom: 10px;
+    margin-bottom: 13px;
 }
 
 .news-list .news-list-item a:hover .title{
@@ -725,7 +726,6 @@ footer p{
 }
 
 .device-item .device-info p{
-    font-weight: bold;
     font-size: 14px;
 }
 
@@ -744,6 +744,10 @@ footer p{
 .device-item:hover .device-info,
 .device-item:hover .mask{ 
     transform: translateY(0);
+}
+
+.device-item:hover .device-info p:first-child{
+    font-size: 18px !important;
 }
 
 .userinfo-container{
@@ -903,7 +907,7 @@ footer p{
     position: absolute;
     width: 100%;
     bottom: 0px;
-    height: 32px;
+    height: 44px;
     font-size: 16px;
     color: #fff;
     border-bottom: 5px solid #F18D00;
