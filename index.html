@@ -18,13 +18,76 @@
                 <img src="./assets/logo-right.png" alt="人工光合作用与太阳能中心" class="inline-flex logo logo-right" />
             </div>
             <nav class="flex1 v-center">
-                <a class="inline-flex active" href="./index.html">首页</a>
-                <a class="inline-flex" href="./科学研究-中心介绍-中心简介.html">中心介绍</a>
-                <a class="inline-flex" href="./科学研究-中心动态.html">中心动态</a>
-                <a class="inline-flex" href="./科学研究-中心成员.html">中心成员</a>
-                <a class="inline-flex" href="./科学研究-研究方向 list.html">科学研究</a>
-                <a class="inline-flex" href="./学术成果-专利.html">学术成果</a>
-                <a class="inline-flex" href="./招聘信息.html">招聘信息</a>
+                <div class="inline-flex nav-container active">
+                    <a class="nav" href="./index.html">首页</a>
+                </div>
+                <div class="inline-flex nav-container">
+                    <a class="nav" href="./科学研究-中心介绍-中心简介.html">中心介绍</a>
+                    <ul>
+                        <li>
+                            <a class="sub-nav" href="#">中心简介</a>
+                            <a class="sub-nav" href="#">中心主任</a>
+                            <a class="sub-nav" href="#">组织架构</a>
+                            <a class="sub-nav" href="#">实验室团队</a>
+                            <a class="sub-nav" href="#">行政办公室</a>
+                            <a class="sub-nav" href="#">中心主任</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="inline-flex nav-container">
+                    <a class="nav" href="./科学研究-中心动态.html">中心动态</a>
+                    <ul>
+                        <li>
+                            <a class="sub-nav" href="#">学术讲座</a>
+                            <a class="sub-nav" href="#">科研进展</a>
+                            <a class="sub-nav" href="#">新闻动态</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="inline-flex nav-container">
+                    <a class="nav" href="./科学研究-中心成员.html">中心成员</a>
+                    <ul>
+                        <li>
+                            <a class="sub-nav" href="#">PI</a>
+                            <a class="sub-nav" href="#">访问教授</a>
+                            <a class="sub-nav" href="#">管理团队</a>
+                            <a class="sub-nav" href="#">研究院</a>
+                            <a class="sub-nav" href="#">博士后</a>
+                            <a class="sub-nav" href="#">科研助理</a>
+                            <a class="sub-nav" href="#">博士生</a>
+                            <a class="sub-nav" href="#">本科生</a>
+                            <a class="sub-nav" href="#">访问学生</a>
+                            <a class="sub-nav" href="#">往届成员</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="inline-flex nav-container">
+                    <a class="nav" href="./科学研究-研究方向 list.html">科学研究</a>
+                    <ul>
+                        <li>
+                            <a class="sub-nav" href="#">研究方向</a>
+                            <a class="sub-nav" href="#">实验设备</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="inline-flex nav-container">
+                    <a class="nav" href="./学术成果-专利.html">学术成果</a>
+                    <ul>
+                        <li>
+                            <a class="sub-nav" href="#">学术论文</a>
+                            <a class="sub-nav" href="#">专利</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="inline-flex nav-container">
+                    <a class="nav" href="./招聘信息.html">招聘信息</a>
+                    <ul>
+                        <li>
+                            <a class="sub-nav" href="#">博士后</a>
+                            <a class="sub-nav" href="#">科研团队</a>
+                        </li>
+                    </ul>
+                </div>
             </nav>
             <div class="header-opts flex v-center">
                 <a class="icon search-icon inline-flex"></a>
@@ -248,6 +311,17 @@
                     },
                 });
             
+            
+                var navs = document.querySelectorAll('.nav-container');
+                navs.forEach(function(nav){ 
+                    // 新增移入移除事件，显示nav相邻的ul，ul默认display:none
+                    nav.addEventListener('mouseenter', function(){
+                        this.querySelector('ul').style.display = 'block';
+                    });
+                    nav.addEventListener('mouseleave', function(){
+                        this.querySelector('ul').style.display = 'none';
+                    });
+                });
             }
         })();    
     </script>
