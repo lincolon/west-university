@@ -507,6 +507,7 @@ footer p{
     width: 200px;
     margin-right: 68px;
     z-index: 10000;
+    margin-top: -60px;
 }
 
 .aside-nav{
