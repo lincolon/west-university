@@ -507,7 +507,7 @@ footer p{
     width: 200px;
     margin-right: 68px;
     z-index: 10000;
-    margin-top: -60px;
+    margin-top: -70px;
 }
 
 .aside-nav{
@@ -616,6 +616,13 @@ footer p{
     height: 340px;
 }
 
+.more-link{
+    color: #00498F;
+    text-decoration: underline;
+    padding-top: 26px;
+    font-size: 14px;
+}
+
 .elps1{
     overflow: hidden;
     text-overflow: ellipsis;
@@ -662,6 +669,7 @@ footer p{
 .news-list{
     margin: 0;
     padding: 34px 0;
+    width: 1;
 }
 
 .news-list .news-list-item{ 
