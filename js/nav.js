@@ -6,10 +6,16 @@
         navs.forEach(function(nav){ 
             // 新增移入移除事件，显示nav相邻的ul，ul默认display:none
             nav.addEventListener('mouseenter', function(){
-                this.querySelector('ul').style.display = 'block';
+                var subNavs = this.querySelector('ul');
+                if(subNavs){
+                    subNavs.style.display = 'block';
+                }
             });
             nav.addEventListener('mouseleave', function(){
-                this.querySelector('ul').style.display = 'none';
+                var subNavs = this.querySelector('ul');
+                if(subNavs){
+                    this.querySelector('ul').style.display = 'none';
+                }
             });
         });
     }

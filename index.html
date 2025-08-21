@@ -195,7 +195,7 @@
                 <div class="block-title light">学术成果</div>
                 <a class="icon-more img-contain"></a>
             </div>
-            <div class="container swiper swiper1">
+            <div class="home-container swiper swiper1" id="swiper1">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                     <!-- Slides -->
@@ -206,11 +206,11 @@
                     <a href="#" class="swiper-slide xscg-item img-cover"></a>
                     <a href="#" class="swiper-slide xscg-item img-cover"></a>
                 </div>
-                <div class="swiper-pagination light-swiper-pagination"></div>
+                <div class="swiper-pagination light-swiper-pagination" id="sxcg-swiper-pagination"></div>
             </div>
             <div class="container" style="bottom: 310px;">
-                <div class="swiper-prev-next swiper-prev swiper-prev-light"></div>
-                <div class="swiper-prev-next swiper-next swiper-next-light"></div>
+                <div class="swiper-prev-next swiper-prev swiper-prev-light" id="sxcg-nav-prev"></div>
+                <div class="swiper-prev-next swiper-next swiper-next-light" id="sxcg-nav-next"></div>
             </div>
         </section>
         <section class="sysb">
@@ -218,7 +218,7 @@
                 <div class="block-title">实验设备</div>
                 <a class="icon-more-dark img-contain"></a>
             </div>
-            <div class="container swiper swiper2">
+            <div class="container swiper swiper2" id="swiper2">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                     <!-- Slides -->
@@ -261,8 +261,8 @@
                 </div>
             </div>
             <div class="container" style="bottom: 190px;">
-                <div class="swiper-prev-next swiper-prev"></div>
-                <div class="swiper-prev-next swiper-next"></div>
+                <div class="swiper-prev-next swiper-prev" id="sysb-nav-prev"></div>
+                <div class="swiper-prev-next swiper-next" id="sysb-nav-next"></div>
             </div>
         </section>
         <footer>
@@ -283,7 +283,7 @@
             document.addEventListener('DOMContentLoaded', main);
 
             function main() { 
-                new Swiper('.swiper1', {
+                new Swiper('#swiper1', {
                     loop: true,
                     autoplay: 5000,
                     slidesPerView: 3,
@@ -291,24 +291,24 @@
                     centeredSlides: true,
                     pagination: {
                         clickable: true,
-                        el: '.swiper-pagination',
+                        el: '#sxcg-swiper-pagination',
                     },
                     navigation: {
-                        nextEl: '.swiper-next-light',
-                        prevEl: '.swiper-prev-light',
+                        nextEl: '#sxcg-nav-next',
+                        prevEl: '#sxcg-nav-prev',
                     },
                 });
 
                 
-                new Swiper('.swiper2', {
+                new Swiper('#swiper2', {
                     slidesPerView: 4,
                     spaceBetween: 20,
                     slidesPerGroup: 4,
                     loop: true,
                     loopFillGroupWithBlank: true,
                     navigation: {
-                        nextEl: '.swiper-next',
-                        prevEl: '.swiper-prev',
+                        nextEl: '#sysb-nav-next',
+                        prevEl: '#sysb-nav-prev',
                     },
                 });
             
